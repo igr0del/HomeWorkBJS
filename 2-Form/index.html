@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+	
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration</title>
+</head>
+
+<body>
+	<form action="/registration" method="post">
+		<section>
+			<h1>Регистрация</h1>
+			<p>Уже есть аккаунт?</p>
+			<a href="#">Войти</a>
+			<h2>Моя компания</h2>
+		</section>
+
+		<section>
+			<label for="first-name">Имя</label>
+			<input type="text" id="first-name" name="name" placeholder="Имя" required>
+		
+			<label for="last-name">Фамилия</label>
+			<input type="text" id="last-name" name="SecondName" placeholder="Фамилия" required>
+		
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email" placeholder="Email" required>
+		</section>
+
+		<p >
+			Я прочитал и принимаю 
+			<a href="#">Условия использования</a>
+		</p>
+
+		<button type="submit">Отправить</button>
+	</form>
+</body>
+</html>
