@@ -1,38 +1,48 @@
 <!DOCTYPE html>
 <html lang="ru">
-	
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./styles/styles.css">
 	<title>Registration</title>
 </head>
 
 <body>
-	<form action="/registration" method="post">
-		<section>
-			<h1>Регистрация</h1>
-			<p>Уже есть аккаунт?</p>
-			<a href="#">Войти</a>
-			<h2>Моя компания</h2>
-		</section>
+	<div class="reg-form__wrapper">
+		<form class="reg-form" action="/registration" method="post">
+			<section class="reg-form__header">
+				<h1>Регистрация</h1>
+				<p>Уже есть аккаунт?</p>
+				<a href="#">Войти</a>
+			</section>
 
-		<section>
-			<label for="first-name">Имя</label>
-			<input type="text" id="first-name" name="name" placeholder="Имя" required>
-		
-			<label for="last-name">Фамилия</label>
-			<input type="text" id="last-name" name="SecondName" placeholder="Фамилия" required>
-		
-			<label for="email">Email</label>
-			<input type="email" id="email" name="email" placeholder="Email" required>
-		</section>
+			<section class="reg-form__body">
+				<label class="reg-form_label" for="company-name">Моя компания</label>
+				<input class="reg-form_input reg-form_input_primary" type="text" id="first-name" name="companyName"
+					placeholder="Моя компания" required>
 
-		<p >
-			Я прочитал и принимаю 
-			<a href="#">Условия использования</a>
-		</p>
+				<label class="reg-form_label" for="first-name">Имя</label>
+				<input class="reg-form_input" type="text" id="first-name" name="name" placeholder="Имя" required>
 
-		<button type="submit">Отправить</button>
-	</form>
+				<label class="reg-form_label" for="last-name">Фамилия</label>
+				<input class="reg-form_input" type="text" id="last-name" name="SecondName" placeholder="Фамилия"
+					required>
+
+				<label class="reg-form_label" for="email">Email</label>
+				<input class="reg-form_input" type="email" id="email" name="email" placeholder="Email" required>
+			</section>
+
+			<button class="button" type="submit">Зарегистрироваться</button>
+
+			<section class="reg-form__footer">
+				<label class="reg-form__footer_label" for="checkbox">Чекюокс согласия об условиях пользования</label>
+				<input type="checkbox">
+				Я прочитал и принимаю
+				<a href="#">Условия использования</a>
+			</section>
+		</form>
+	</div>
 </body>
+
 </html>
