@@ -12,6 +12,7 @@
     --text-placeholder-color: #999;
     --text-button-primary: #FFFF;
     --text-footer-size: 14px;
+    --border-radius-5: 5px;
 }
 
 body {
@@ -26,6 +27,11 @@ body {
     border-radius: 10px;
     background: #FFFEFE;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    padding: 90px 95px;
+}
+
+.reg-form__header {
+    margin-bottom: 47px;
 }
 
 .reg-form__header h1 {
@@ -55,7 +61,11 @@ body {
     text-underline-position: from-font;
 }
 
-.reg-form_label {
+.reg-form__body {
+    margin-bottom: 22px;
+}
+
+.reg-form__body .reg-form_label {
     display: none;
 }
 
@@ -70,6 +80,8 @@ body {
     font-weight: var(--text-placeholder-weight);
     background-color: var(--button-form-color);
     color: var(--text-button-primary);
+    border-radius: 5px;
+    margin-bottom: 22px;
 }
 
 .reg-form__footer {
