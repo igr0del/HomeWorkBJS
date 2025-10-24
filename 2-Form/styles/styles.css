@@ -19,31 +19,70 @@ body {
     background: var(--bg-body-color);
 }
 
+/* wrapper */
 .reg-form__wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    width: 582px;
+    height: 573px;
+
     border-radius: 10px;
+
     background: #FFFEFE;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    padding: 90px 95px;
 }
 
+/* тело формы */
+
+.reg-form {
+    padding: 72px 90px;
+}
+
+/* хэдер */
+
 .reg-form__header {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 47px;
+    padding: 0;
+}
+
+.reg-form__header-log {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
 }
 
 .reg-form__header h1 {
+    color: #333;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
     color: var(--h1-color);
     font-size: var(--h1-size);
     text-align: center;
+
+    margin: 0;
 }
 
 .reg-form__header p {
     color: var(--text-form-color);
     font-size: var(--text-header-form-size);
     font-weight: var(--text-weight);
+
+    margin: 0;
 }
 
 .reg-form__header a {
@@ -59,14 +98,60 @@ body {
     text-decoration-thickness: auto;
     text-underline-offset: auto;
     text-underline-position: from-font;
+
+    margin: 0;
 }
 
 .reg-form__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     margin-bottom: 22px;
+    gap: 22px;
 }
+
+.reg-form__body_personal {
+    display: flex;
+    gap: 1px;
+    width: 100%;
+}
+
+
 
 .reg-form__body .reg-form_label {
     display: none;
+}
+
+.reg-form_input {
+    height: 44px;
+    padding-left: 11px;
+    border-radius: 5px;
+    background: #F5F5F5;
+    width: 96%;
+    padding: 0 0 0 11px;
+    border: none;
+
+    color: #999;
+
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.reg-form_input_primary {
+    border: 1px solid #F5F5F5;
+    background: #FFF;
+
+    color: #333;
+
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 
 .reg-form_input::placeholder {
