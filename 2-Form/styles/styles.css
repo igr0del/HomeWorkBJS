@@ -1,105 +1,275 @@
 :root {
-    --bg-body-color: linear-gradient(243deg, #FDC5C5 25.45%, rgba(242, 152, 222, 0.00) 100%), linear-gradient(243deg, #FFA5A5 32.96%, rgba(255, 255, 255, 0.00) 82.03%), #F39494;
-    --h1-color: color: #333;
-    --h1-size: 36px;
-    --h1-weight: 700;
-    --text-form-color: #666;
-    --text-header-form-size: 18px;
-    --text-weight: 400;
-    --button-form-color: #089FE0;
-    --text-placeholder-weight: 600;
-    --text-placeholder-size: 16px;
-    --text-placeholder-color: #999;
-    --text-button-primary: #FFFF;
-    --text-footer-size: 14px;
-    --border-radius-5: 5px;
+	--bg-body-color: linear-gradient(243deg, #FDC5C5 25.45%, rgba(242, 152, 222, 0.00) 100%), linear-gradient(243deg, #FFA5A5 32.96%, rgba(255, 255, 255, 0.00) 82.03%), #F39494;
+	--h1-color: #333;
+	--h1-size: 36px;
+	--h1-weight: 700;
+	--text-form-color: #666;
+	--text-header-form-size: 18px;
+	--text-weight: 400;
+	--button-form-color: #089FE0;
+	--text-placeholder-weight: 600;
+	--text-placeholder-size: 16px;
+	--text-placeholder-color: #999;
+	--text-button-primary: #FFFF;
+	--text-footer-size: 14px;
+	--border-radius-5: 5px;
+	--input-width: 100%;
+	--input-height: 44px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-    background: var(--bg-body-color);
+	background: var(--bg-body-color);
+	font-family: "Open Sans", sans-serif;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
+/* wrapper */
 .reg-form__wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
-    background: #FFFEFE;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    padding: 90px 95px;
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	width: 582px;
+	min-height: 573px;
+	border-radius: 10px;
+	background: #FFFEFE;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
+/* тело формы */
+.reg-form {
+	padding: 72px 90px;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+/* хэдер */
 .reg-form__header {
-    margin-bottom: 47px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 47px;
+	padding: 0;
+}
+
+.reg-form__header-log {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 6px;
+	margin-top: 8px;
 }
 
 .reg-form__header h1 {
-    color: var(--h1-color);
-    font-size: var(--h1-size);
-    text-align: center;
+	color: var(--h1-color);
+	text-align: center;
+	font-size: var(--h1-size);
+	font-weight: var(--h1-weight);
+	line-height: normal;
+	margin: 0;
 }
 
 .reg-form__header p {
-    color: var(--text-form-color);
-    font-size: var(--text-header-form-size);
-    font-weight: var(--text-weight);
+	color: var(--text-form-color);
+	font-size: var(--text-header-form-size);
+	font-weight: var(--text-weight);
+	margin: 0;
 }
 
 .reg-form__header a {
-    font-size: var(--text-header-form-size);
-    font-weight: var(--text-weight);
-    color: var(--button-form-color);
-    font-weight: var(--text-weight);
-    font-size: var(--text-header-form-size);
-    line-height: normal;
-    text-decoration-line: underline;
-    text-decoration-style: solid;
-    text-decoration-skip-ink: none;
-    text-decoration-thickness: auto;
-    text-underline-offset: auto;
-    text-underline-position: from-font;
+	font-size: var(--text-header-form-size);
+	font-weight: var(--text-weight);
+	color: var(--button-form-color);
+	line-height: normal;
+	text-decoration: underline;
+	margin: 0;
 }
 
+.reg-form__header a:hover {
+	text-decoration: none;
+}
+
+/* тело формы */
 .reg-form__body {
-    margin-bottom: 22px;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	margin-bottom: 22px;
+	gap: 22px;
+	width: 100%;
 }
 
-.reg-form__body .reg-form_label {
-    display: none;
+/* контейнер для имени и фамилии */
+.reg-form__body_personal {
+	display: flex;
+	gap: 1px;
+	width: 100%;
 }
 
+/* скрытые лейблы */
+.reg-form_label {
+	display: none;
+	width: 100%;
+}
+
+/* общие стили инпутов */
+.reg-form_input {
+	height: var(--input-height);
+	padding: 0 11px;
+	border-radius: var(--border-radius-5);
+	background: #F5F5F5;
+	width: var(--input-width);
+	border: none;
+	color: #999;
+	font-family: "Open Sans";
+	font-size: 16px;
+	font-style: italic;
+	font-weight: 400;
+	line-height: normal;
+	transition: all 0.3s ease;
+}
+
+.reg-form_input:focus {
+	outline: none;
+	background: #FFFFFF;
+	box-shadow: 0 0 0 2px rgba(8, 159, 224, 0.2);
+}
+
+/* основные инпуты */
+.reg-form_input_primary {
+	border: 1px solid #F5F5F5;
+	background: #FFF;
+	color: #333;
+	font-style: normal;
+	font-weight: 600;
+}
+
+/* инпуты имени и фамилии */
+.reg-form_input-beetwen {
+	flex: 1;
+	gap: 1px;
+}
+
+/* плейсхолдер */
 .reg-form_input::placeholder {
-    font-weight: var(--text-placeholder-weight);
-    font-size: var(--text-placeholder-size);
-    color: var(--text-placeholder-color);
+	font-weight: var(--text-placeholder-weight);
+	font-size: var(--text-placeholder-size);
+	color: var(--text-placeholder-color);
 }
 
+/* кнопка */
 .button {
-    font-size: var(--h1-size);
-    font-weight: var(--text-placeholder-weight);
-    background-color: var(--button-form-color);
-    color: var(--text-button-primary);
-    border-radius: 5px;
-    margin-bottom: 22px;
+	font-size: 16px;
+	font-weight: 600;
+	background-color: var(--button-form-color);
+	color: var(--text-button-primary);
+	border-radius: var(--border-radius-5);
+	margin-bottom: 22px;
+	width: var(--input-width);
+	height: var(--input-height);
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	font-family: "Open Sans", sans-serif;
+	color: #FFF;
+	text-align: center;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
 }
 
+.button:hover {
+	background-color: #078BC7;
+	transform: translateY(-1px);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+	transform: translateY(0);
+}
+
+/* футер формы */
 .reg-form__footer {
-    font-weight: var(--text-weight);
-    font-size: var(--text-footer-size);
+	font-weight: var(--text-weight);
+	font-size: var(--text-footer-size);
+	color: var(--text-form-color);
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-wrap: wrap;
 }
 
 .reg-form__footer a {
-    color: var(--button-form-color);
-    line-height: normal;
-    text-decoration-line: underline;
-    text-decoration-style: solid;
-    text-decoration-skip-ink: none;
-    text-decoration-thickness: auto;
-    text-underline-offset: auto;
-    text-underline-position: from-font;
+	color: var(--button-form-color);
+	text-decoration: underline;
 }
 
-.reg-form__footer label {
-    display: none;
+.reg-form__footer a:hover {
+	text-decoration: none;
+}
+
+.reg-form__footer input[type="checkbox"] {
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+
+.reg-form__footer_label {
+	display: none;
+}
+
+/* адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+	.reg-form__wrapper {
+		width: 95%;
+		margin: 20px auto;
+	}
+
+	.reg-form {
+		padding: 40px 20px;
+	}
+
+	.reg-form__header h1 {
+		font-size: 28px;
+	}
+
+	.reg-form__header-log {
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	.reg-form__body_personal {
+		flex-direction: column;
+		gap: 22px;
+	}
+
+	.reg-form_input-beetwen {
+		width: 100%;
+	}
+}
+
+/* анимации */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.reg-form__wrapper {
+	animation: fadeIn 0.5s ease-out;
 }

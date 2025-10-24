@@ -13,8 +13,10 @@
 		<form class="reg-form" action="/registration" method="post">
 			<section class="reg-form__header">
 				<h1>Регистрация</h1>
-				<p>Уже есть аккаунт?</p>
-				<a href="#">Войти</a>
+				<div class="reg-form__header-log">
+					<p>Уже есть аккаунт?</p>
+					<a href="#">Войти</a>
+				</div>
 			</section>
 
 			<section class="reg-form__body">
@@ -22,12 +24,15 @@
 				<input class="reg-form_input reg-form_input_primary" type="text" id="first-name" name="companyName"
 					placeholder="Моя компания" required>
 
-				<label class="reg-form_label" for="first-name">Имя</label>
-				<input class="reg-form_input" type="text" id="first-name" name="name" placeholder="Имя" required>
+				<div class="reg-form__body_personal">
+					<label class="reg-form_label" for="first-name">Имя</label>
+					<input class="reg-form_input reg-form_input-beetwen" type="text" id="first-name" name="name"
+						placeholder="Имя" required>
 
-				<label class="reg-form_label" for="last-name">Фамилия</label>
-				<input class="reg-form_input" type="text" id="last-name" name="SecondName" placeholder="Фамилия"
-					required>
+					<label class="reg-form_label" for="last-name">Фамилия</label>
+					<input class="reg-form_input reg-form_input-beetwen"" type=" text" id="last-name" name="SecondName"
+						placeholder="Фамилия" required>
+				</div>
 
 				<label class="reg-form_label" for="email">Email</label>
 				<input class="reg-form_input" type="email" id="email" name="email" placeholder="Email" required>
