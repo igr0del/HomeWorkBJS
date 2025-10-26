@@ -8,6 +8,10 @@
 	margin: 0 0 24px 0;
 }
 
+.text_h2-top {
+	color: #FFF;
+}
+
 .text_h3 {
 	color: #000;
 	font-family: 'Inter', sans-serif;
@@ -18,6 +22,10 @@
 	margin: 0 0 16px 0;
 }
 
+.text_h3-top {
+	color: #FFF;
+}
+
 .description {
 	color: rgba(78, 93, 124, 0.50);
 	font-family: Inter;
@@ -26,6 +34,10 @@
 	font-weight: 500;
 	line-height: 140%;
 	margin: 0;;
+}
+
+.description-top {
+	color: #FFF;
 }
 
 .benefit {
@@ -50,6 +62,10 @@
 	font-style: normal;
 	font-weight: 500;
 	line-height: 140%;
+}
+
+.benefit-top {
+	color: #FFF;
 }
 
 .benefit span {
@@ -91,7 +107,7 @@
 }
 
 .rate_offers-item-content-header {
-	margin: 0 0 50px 0;
+	margin: 0 0 34px 0;
 }
 
 .rate_offers-item-first {
@@ -101,7 +117,7 @@
 .rate_offers-item-content-table {
 	display: grid;
 	grid-template-columns: repeat(2, auto);
-	gap: 16px;
+	gap: 0px;
 
 	color: #4E5D7C;
 	font-family: 'Inter', sans-serif;
@@ -110,22 +126,97 @@
 	font-weight: 500;
 	line-height: 120%;
 
-	margin: 0 0 40px 0	;
+	padding: 0 0 40px 0;
 }
 
 .rate_offers-item-content-table p {
 	margin: 0;
+	padding: 8px;
 }
 
 .rate_offers-item-content-table-labels {
 	display: grid;
 	grid-template-rows: repeat(3, auto);
-	gap: 32px;
-	border-bottom: 1px solid rgba(78, 93, 124, 0.08);;
+	row-gap: 1px;
+	background-color: #ccc;
+}
+
+.rate_offers-item-content-table-labels > p {
+	background: #fff;
+	padding: 16px 0px 16px 0px;
 }
 
 .rate_offers-item-content-table-values {
 	display: grid;
 	grid-template-rows: repeat(3, auto);
-	gap: 32px;
+	row-gap: 1px;
+	background-color: #ccc;
+}
+
+.rate_offers-item-content-table-values>p {
+	background: #fff;
+	margin: 0;
+	padding: 16px 0 16px 16px;
+	text-align: left;
+}
+
+.rate_offers-item-content-table-values>p.rate_offers-item-content-table-values-top {
+	position: relative;
+	color: #fff; 
+	z-index: 1;
+
+	font-family: 'Inter', sans-serif;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: 700;
+}
+
+.rate_offers-item-content-table-values>p.rate_offers-item-content-table-values-top::before {
+	content: "";
+	position: absolute;
+	inset: 8px 0;
+	right: 8px;
+	background: #FFC736;
+	border-radius: 8px;
+	z-index: -1;
+	width: 99px;
+	height: 36px;
+}
+
+.rate_offers-item-top__wrapper {
+	background-color: #357EFE;
+	border-radius: 15px;
+	width: 369px;
+	height: 507px;
+	filter: drop-shadow(0 0 32px rgba(78, 93, 124, 0.32));
+}
+
+.rate_offers-item-content-header-top {
+	margin: 0 0 16px 0;
+}
+
+.rate_offers-item-content-header-top {
+	color: #fff;
+}
+
+.button_rate {
+	width: 289px;
+	padding: 12px 63px;
+	border: none;
+	border-radius: 47px;
+	background: #357EFE;
+
+	color: rgba(255, 255, 255, 0.60);
+	color: #FFF;
+	font-family: 'Inter', sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 140%;
+
+	cursor: pointer;
+}
+
+.rate_offers-item-content-table-top {
+	padding: 0 0 35px 0;
 }
