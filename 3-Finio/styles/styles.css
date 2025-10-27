@@ -1,3 +1,4 @@
+/* === ТИПОГРАФИКА === */
 .text_h2 {
 	color: #000;
 	font-family: 'Inter', sans-serif;
@@ -28,12 +29,12 @@
 
 .description {
 	color: rgba(78, 93, 124, 0.50);
-	font-family: Inter;
+	font-family: 'Inter', sans-serif;
 	font-size: 17px;
 	font-style: normal;
 	font-weight: 500;
 	line-height: 140%;
-	margin: 0;;
+	margin: 0;
 }
 
 .description-top {
@@ -49,12 +50,7 @@
 
 	border-radius: 8px;
 	background: #1ABC9C;
-
 	margin: 0 0 16px 0;
-
-	text-align: center;
-	align-items: center;
-	justify-content: center;
 
 	color: #FFF;
 	font-family: 'Inter', sans-serif;
@@ -62,16 +58,14 @@
 	font-style: normal;
 	font-weight: 500;
 	line-height: 140%;
-}
-
-.benefit-top {
-	color: #FFF;
+	text-align: center;
 }
 
 .benefit span {
 	font-weight: 800;
 }
 
+/* === ОБЩАЯ СЕТКА === */
 .rate__wrapper {
 	display: grid;
 	grid-column: 1fr;
@@ -92,13 +86,12 @@
 	gap: 24px;
 }
 
+/* === КАРТОЧКИ === */
 .rate_offers-item__wrapper {
 	width: 369px;
 	height: 507px;
-
 	background-color: #FFF;
 	filter: drop-shadow(0 0 32px rgba(78, 93, 124, 0.16));
-
 	border-radius: 15px;
 }
 
@@ -106,32 +99,25 @@
 	margin: 48px 40px;
 }
 
-.rate_offers-item-content-header {
-	margin: 0 0 34px 0;
-}
-
 .rate_offers-item-first {
 	margin: 93px 40px 48px 40px;
 }
 
+.rate_offers-item-content-header {
+	margin: 0 0 34px 0;
+}
+
+/* === ТАБЛИЦА === */
 .rate_offers-item-content-table {
 	display: grid;
 	grid-template-columns: repeat(2, auto);
-	gap: 0px;
-
 	color: #4E5D7C;
 	font-family: 'Inter', sans-serif;
 	font-size: 17px;
 	font-style: normal;
 	font-weight: 500;
 	line-height: 120%;
-
 	padding: 0 0 40px 0;
-}
-
-.rate_offers-item-content-table p {
-	margin: 0;
-	padding: 8px;
 }
 
 .rate_offers-item-content-table-labels {
@@ -141,9 +127,10 @@
 	background-color: #ccc;
 }
 
-.rate_offers-item-content-table-labels > p {
+.rate_offers-item-content-table-labels>p {
 	background: #fff;
-	padding: 16px 0px 16px 0px;
+	padding: 16px 0;
+	margin: 0;
 }
 
 .rate_offers-item-content-table-values {
@@ -160,14 +147,11 @@
 	text-align: left;
 }
 
+/* === ЖЕЛТАЯ ВЫГОДА === */
 .rate_offers-item-content-table-values>p.rate_offers-item-content-table-values-top {
 	position: relative;
-	color: #fff; 
+	color: #fff;
 	z-index: 1;
-
-	font-family: 'Inter', sans-serif;
-	font-size: 17px;
-	font-style: normal;
 	font-weight: 700;
 }
 
@@ -183,40 +167,94 @@
 	height: 36px;
 }
 
+/* === ТОП-КАРТОЧКА (СИНЯЯ) === */
 .rate_offers-item-top__wrapper {
 	background-color: #357EFE;
 	border-radius: 15px;
 	width: 369px;
 	height: 507px;
 	filter: drop-shadow(0 0 32px rgba(78, 93, 124, 0.32));
+	color: #fff;
 }
 
 .rate_offers-item-content-header-top {
 	margin: 0 0 16px 0;
-}
-
-.rate_offers-item-content-header-top {
 	color: #fff;
 }
 
+/* таблица в синей карточке */
+.rate_offers-item-top__wrapper .rate_offers-item-content-table-labels,
+.rate_offers-item-top__wrapper .rate_offers-item-content-table-values {
+	row-gap: 1px;
+	background-color: rgba(255, 255, 255, 0.16);
+}
+
+.rate_offers-item-top__wrapper .rate_offers-item-content-table-labels>p,
+.rate_offers-item-top__wrapper .rate_offers-item-content-table-values>p {
+	background: #357EFE;;
+	color: #fff;
+}
+
+.rate_offers-item-top__wrapper .rate_offers-item-content-table-labels>p {
+	padding: 16px 0 16px 0px;
+}
+
+.rate_offers-item-top__wrapper .rate_offers-item-content-table-values>p.rate_offers-item-content-table-values-top::before {
+	background: #FFC736;
+	border-radius: 8px;
+}
+
+/* === КНОПКА === */
 .button_rate {
 	width: 289px;
 	padding: 12px 63px;
 	border: none;
 	border-radius: 47px;
 	background: #357EFE;
-
-	color: rgba(255, 255, 255, 0.60);
 	color: #FFF;
 	font-family: 'Inter', sans-serif;
 	font-size: 15px;
 	font-style: normal;
 	font-weight: 800;
 	line-height: 140%;
-
 	cursor: pointer;
 }
 
+.rate_offers-item-top__wrapper .button_rate {
+	background: #fff;
+	color: #357EFE;
+}
+
+.rate_offers-item-top__wrapper .button_rate:hover {
+	filter: brightness(1);
+}
+
 .rate_offers-item-content-table-top {
-	padding: 0 0 35px 0;
+	padding: 0 0 35px 0;;
+}
+
+@media (max-width: 375px) {
+	.text_h2 {
+		font-size: 36px;
+		font-style: normal;
+		font-weight: 600;
+	}
+	
+	.text_h3 {
+		font-size: 32px;
+		font-weight: 800;
+	}
+
+	.description {
+		font-size: 17px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 140%;
+	}
+
+	.rate_offers {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(auto-fit, minmax(436px, 1fr))
+		gap: 24px;
+	}
 }
