@@ -3,10 +3,33 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="./scripts/script.js"></script>
+	<link rel="stylesheet" href="./styles/styles.css">
 	<title>4-navigator</title>
 </head>
 <body>
+	<div class="container">
+		<h1>Расчет расстояния</h1>
+		<div class="form-group">
+			<label for="positionLat">Ваша широта (lat):</label>
+			<input type="number" id="positionLat" placeholder="Например: 55.75" required>
+		</div>
+		<div class="form-group">
+			<label for="positionLong">Ваша долгота (long):</label>
+			<input type="number" id="positionLong" placeholder="Например: 37.61" required>
+		</div>
+		<div class="form-group">
+			<label for="addressLat">Широта назначения (lat):</label>
+			<input type="number" id="addressLat" placeholder="Например: 59.93" required>
+		</div>
+		<div class="form-group">
+			<label for="addressLong">Долгота назначения (long):</label>
+			<input type="number" id="addressLong" placeholder="Например: 30.33" required>
+		</div>
 	
+		<button onclick="calculateAndDisplay()">Рассчитать расстояние</button>
+	
+		<div class="result" id="result"></div>
+	</div>
+	<script src="./scripts/script.js"></script>
 </body>
 </html>
