@@ -1,9 +1,12 @@
-const removeByCondition = (arr, cond) => arr.filter(x => !cond(x));
-const shouldRemove = barier => x => x > barier;
+const removeByCondition = (arr, shouldRemove) =>
+  arr.filter(n => !shouldRemove(n));
 
-const inputArr = [3, 6, 9, 2];
-const inputBar = 5;
+const createShouldRemove = barierNum =>
+  n => n > barierNum;
 
-const output = removeByCondition(inputArr, shouldRemove(inputBar));
+const shouldRemove = createShouldRemove(5);
 
-console.log(output);
+const input = [3, 6, 9, 2];
+const output = removeByCondition(input, shouldRemove);
+
+console.log(output); // [3, 2]
