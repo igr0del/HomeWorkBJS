@@ -14,6 +14,6 @@ function sortArray(array) {
 			}
 		}
 	}
+	
 	console.log("Sorted array:", array);
 }
-
