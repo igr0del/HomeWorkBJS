@@ -1,14 +1,12 @@
-const input = prompt("Enter dates separated by commas (e.g., 12-05-2020,31/12/2021):");
+function normalizeDates(dateArray) {
+  const validDates = filterValidDates(dateArray);
 
-const dateArray = input.split(',').map(date => date.trim());
+  const formattedDates = validDates
+    .map(convertToRightFormat)
+    .filter(Boolean);
 
-const validDates = filterValidDates(dateArray);
-
-const formattedDates = validDates
-	.map(convertToRightFormat)
-	.filter(Boolean);
-
-console.log(formattedDates);
+  return formattedDates;
+}
 
 function parseDate(dateString) {
 	const regex = /^(\d{2})([./\-\\_])(\d{2})\2(\d{4})$/;
@@ -56,3 +54,11 @@ function isValidDate(input){
 		date.getDate() === day
 	);
 }
+
+const input = prompt("Enter dates separated by commas (e.g., 12-05-2020,31/12/2021):");
+
+const dateArray = input.split(',').map(date => date.trim());
+
+const result = normalizeDates(dateArray);
+
+console.log(result);
