@@ -21,16 +21,19 @@ function parseDate(dateString) {
 		month: Number(monthStr),
 		year: Number(yearStr),
 		sep
- 	};
+	};
 }
 
 function convertToRightFormat(dateString){
 	const data = parseDate(dateString);
   	if (!data) return null;
 
-	const [_, day, sep, month, year] = data;
+  	const { day, month, year } = data;
 
-  	return `${day}-${month}-${year}`;
+	const dayStr = String(day).padStart(2, "0");
+ 	const monthStr = String(month).padStart(2, "0");
+
+	return `${monthStr}-${dayStr}-${year}`;
 }
 
 function filterValidDates(dateArray){
@@ -41,19 +44,15 @@ function isValidDate(input){
 	const data = parseDate(input);
   	if (!data) return false;
 
-	const [_, dayStr, sep, monthStr, yearStr] = data;
-
-	const day = Number(dayStr);
-  	const month = Number(monthStr);
-  	const year = Number(yearStr);
+	const { day, month, year } = data;
 
 	if (month < 1 || month > 12 || day < 1 || day > 31) return false;
 
 	const date = new Date(`${year}-${month}-${day}`);
 
 	return (
-		date.getFullYear() == year &&
-		date.getMonth() + 1 == month &&
-		date.getDate() == day	
+		date.getFullYear() === year &&
+		date.getMonth() + 1 === month &&
+		date.getDate() === day
 	);
 }
