@@ -12,7 +12,7 @@ console.log(formattedDates);
 
 function parseDate(dateString) {
 	const regex = /^(\d{2})([./\-\\_])(\d{2})\2(\d{4})$/;
- 	const match = str.match(regex);
+ 	const match = dateString.match(regex);
   	if (!match) return null;
 
 	const [_, dayStr, sep, monthStr, yearStr] = match;
@@ -28,7 +28,7 @@ function convertToRightFormat(dateString){
 	const data = parseDate(dateString);
   	if (!data) return null;
 
-	const [_, day, sep, month, year] = match;
+	const [_, day, sep, month, year] = data;
 
   	return `${day}-${month}-${year}`;
 }
@@ -41,7 +41,7 @@ function isValidDate(input){
 	const data = parseDate(input);
   	if (!data) return false;
 
-	const [_, dayStr, sep, monthStr, yearStr] = match;
+	const [_, dayStr, sep, monthStr, yearStr] = data;
 
 	const day = Number(dayStr);
   	const month = Number(monthStr);
