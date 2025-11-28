@@ -33,7 +33,7 @@ function convertToRightFormat(dateString){
 	const dayStr = String(day).padStart(2, "0");
  	const monthStr = String(month).padStart(2, "0");
 
-	return `${dayStr}-${monthStr}-${year};
+	return `${dayStr}-${monthStr}-${year}`;
 }
 
 function filterValidDates(dateArray){
