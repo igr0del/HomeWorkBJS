@@ -1,5 +1,13 @@
+const input = prompt('Введите номер карты');
+
+if (luhnCheck(input) === true) {
+	console.log('Карта верная!');
+} else {
+	console.log('Неверные данные карты');
+}
+
 function luhnCheck(cardNumber) {
-	const cardNumber = String(input).replace(/\D/g, '');
+	cardNumber = String(cardNumber).replace(/\D/g, '');
 
 	if (cardNumber.length < 12) return false;
 	
@@ -10,8 +18,8 @@ function luhnCheck(cardNumber) {
 		let digit = Number(cardNumber[i]);
 
 		if (shouldDouble) {
-		digit *= 2;
-		if (digit > 9) digit -= 9;
+			digit *= 2;
+			if (digit > 9) digit -= 9;
 		}
 
 		sum += digit;
@@ -19,12 +27,4 @@ function luhnCheck(cardNumber) {
 	}
 
 	return sum % 10 === 0;
-}
-
-const input = prompt('Введите номер карты');
-
-if (luhnCheck(input)) {
-  console.log('Карта верная!');
-} else {
-  console.log('Неверные данные карты');
 }
