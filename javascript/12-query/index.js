@@ -6,7 +6,7 @@ const user = {
     location: 'moscow'
 }
 
-console.log(toQueryString(use));
+console.log(toQueryString(user));
 
 function toQueryString(params){
     return Object.entries(params)
