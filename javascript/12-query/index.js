@@ -6,9 +6,9 @@ const user = {
     location: 'moscow'
 }
 
-console.log(toQueryString(use));
+console.log(toQueryString(user));
 
-function toQueryString(){
+function toQueryString(params){
     return Object.entries(params)
         .filter(([_, val]) => val !== undefined && val !== null)
         .map(([key, val]) => `${encodeURIComponent(key)}=${encodeURIComponent(val)}`)
