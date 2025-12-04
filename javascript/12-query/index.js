@@ -8,7 +8,7 @@ const user = {
 
 console.log(toQueryString(use));
 
-function toQueryString(){
+function toQueryString(params){
     return Object.entries(params)
         .filter(([_, val]) => val !== undefined && val !== null)
         .map(([key, val]) => `${encodeURIComponent(key)}=${encodeURIComponent(val)}`)
