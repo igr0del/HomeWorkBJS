@@ -5,17 +5,13 @@ const ToDolist = {
 		if (!title || !priority) {
 			throw new Error('Title and priority are required to add a task.');
 		}
-		
 		const id = Date.now().toString();
-
 		const newTask = {
 			title,
 			id,
 			priority
 		}
-
 		this.tasks.push(newTask);
-		
 		return task;
 	},
 
