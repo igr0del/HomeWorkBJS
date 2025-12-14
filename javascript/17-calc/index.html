@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>DOM Калькулятор</title>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+	<main class="wrap">
+		<section class="card">
+			<header class="card__header">
+				<h1 class="title">Калькулятор</h1>
+			</header>
+
+			<div class="grid">
+				<label class="field">
+					<span class="field__label">Первое число</span>
+					<input id="a" class="input" type="number" step="any" placeholder="Например: 12.5" />
+				</label>
+
+				<label class="field">
+					<span class="field__label">Второе число</span>
+					<input id="b" class="input" type="number" step="any" placeholder="Например: 3" />
+				</label>
+
+				<label class="field field--full">
+					<span class="field__label">Операция</span>
+					<select id="operation" class="select">
+						<option value="add">Сложение (+)</option>
+						<option value="sub">Вычитание (−)</option>
+						<option value="mul">Умножение (×)</option>
+						<option value="div">Деление (÷)</option>
+					</select>
+				</label>
+
+				<button id="calcBtn" class="btn field--full" type="button">
+					Получить результат
+				</button>
+
+				<label class="field field--full">
+					<span class="field__label">Результат</span>
+					<input id="result" class="input input--result" type="text" readonly
+						placeholder="Здесь появится ответ" />
+				</label>
+			</div>
+		</section>
+	</main>
+
+	<script src="index.js"></script>
+</body>
+
+</html>
